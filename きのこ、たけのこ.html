@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024　3-2　ページ</title>
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #ffff66;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section#home {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        section#contact {
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #22a6bb;
+        }
+
+        /* フォームのスタイル */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #22a6bb;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #22f6bb;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>アコガレ　2024 3-2</h1>
+        <h2>〜　団結　〜</h2>
+        <nav>
+            <ul>
+                <li><a href="アコガレ　2024 3-2.html">3-2紹介</a></li>
+                <li><a href="2024　3-2　担任紹介.html">青担任紹介</a></li>
+                <li><a href="2024 3-2　順位.html">3-2順位</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ホームセクション -->
+    <section id="home">
+        <h2>きのこ派？たけのこ派？</h2>
+        <p>きのこ派…　％　　　たけのこ派…　％</p>
+        <p>グラフ結果！</p>
+        <img src="きのこたけのこ.png" alt="例の画像1" width="350">
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy;作成：一政吏集　プログラム：HTML 　3-2 2024</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !message) {
+                    alert('すべてのフィールドを入力してください。');
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

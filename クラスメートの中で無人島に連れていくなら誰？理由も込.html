@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024　3-2　ページ</title>
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #ffff66;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section#home {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        section#contact {
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #22a6bb;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>アコガレ　2024 3-2</h1>
+        <h2>〜　団結　〜</h2>
+        <nav>
+            <ul>
+                <li><a href="アコガレ　2024 3-2.html">3-2紹介</a></li>
+                <li><a href="2024　3-2　担任紹介.html">青担任紹介</a></li>
+                <li><a href="2024 3-2　順位.html">3-2順位</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ホームセクション -->
+    <section id="home">
+        <h2>面白い人は？</h2>
+        <input type="text" id="search" placeholder="名前を検索" style="padding: 10px; margin-bottom: 20px;">
+        <div id="list">
+            <p>1位：山田</p>
+            <p>2位：佐藤</p>
+            <p>3位：田中</p>
+            <p>4位：鈴木</p>
+            <p>5位：高橋</p>
+            <p>6位：伊藤</p>
+            <!-- 他の順位も追加 -->
+        </div>
+    </section>
+
+    <h2>アコガレ作成3-2：一政吏集</h2>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy;作成：一政吏集　プログラム：HTML 　3-2 2024</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchBox = document.getElementById('search');
+        const list = document.getElementById('list');
+
+        searchBox.addEventListener('input', () => {
+            const query = searchBox.value.trim().toLowerCase();
+            const items = list.querySelectorAll('p');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = ''; // 表示する
+                } else {
+                    item.style.display = 'none'; // 非表示にする
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
