@@ -21,13 +21,13 @@
 
         /* ヘッダーのスタイル */
         header {
-            background-image: url('3年2組画像.png'); /* 背景画像をここで指定 */
+            background-image: url('3年2組画像.png'); /* 背景画像を指定 */
             background-size: cover;
             background-position: center;
             color: #fff;
             padding: 135px 0;
             text-align: center;
-            position: relative; /* オーバーレイのため */
+            position: relative; /* オーバーレイを作成するため */
         }
 
         header::before {
@@ -37,25 +37,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒で文字を引き立てる */
-            z-index: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒を背景に追加 */
+            z-index: 0; /* テキストより後ろに配置 */
         }
 
         header h1, header h2, header nav ul {
             position: relative;
-            z-index: 1; /* オーバーレイの上に配置 */
+            z-index: 1; /* オーバーレイの上にテキストを表示 */
         }
 
         header h1 {
-            font-size: 4rem; /* タイトルを強調 */
+            font-size: 4rem; /* フォントサイズ調整 */
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* テキストシャドウ */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 文字にシャドウを追加 */
         }
 
         header h2 {
-            font-size: 2.5rem;
+            font-size: 2.5rem; /* サブタイトルのサイズ調整 */
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* シャドウ追加 */
         }
 
         header nav ul {
@@ -74,7 +74,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2rem;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* ナビゲーションリンクにシャドウ */
         }
 
         header nav ul li a:hover {
@@ -93,15 +93,47 @@
             text-align: center;
         }
 
+        section#contact {
+            background-color: #fff;
+        }
+
         h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #22a6bb;
         }
 
-        p {
-            font-size: 1rem;
-            margin-bottom: 10px;
+        /* フォームのスタイル */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #22a6bb;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #22f6bb;
         }
 
         /* フッターのスタイル */
@@ -124,7 +156,7 @@
             }
 
             header h1 {
-                font-size: 3rem;
+                font-size: 3rem; /* スマホ用サイズ */
             }
 
             header h2 {
@@ -149,49 +181,36 @@
 
     <!-- ホームセクション -->
     <section id="home">
-        <h2>一週間学校のルールを1つ自由に変えられるなら、何を変える？</h2>
-        <p>1位：</p>
-        <p>2位：</p>
-        <p>3位：</p>
-        <p>4位：</p>
-        <p>5位：</p>
-        <p>6位：</p>
-        <p>7位：</p>
-        <p>8位：</p>
-        <p>9位：</p>
-        <p>10位：</p>
-        <p>11位：</p>
-        <p>12位：</p>
-        <p>13位：</p>
-        <p>14位：</p>
-        <p>15位：</p>
-        <p>16位：</p>
-        <p>17位：</p>
-        <p>18位：</p>
-        <p>19位：</p>
-        <p>20位：</p>
-        <p>21位：</p>
-        <p>22位：</p>
-        <p>23位：</p>
-        <p>24位：</p>
-        <p>25位：</p>
-        <p>26位：</p>
-        <p>27位：</p>
-        <p>28位：</p>
-        <p>29位：</p>
-        <p>31位：</p>
-        <p>32位：</p>
-        <p>33位：</p>
-        <p>34位：</p>
-        <p>35位：</p>
-        <p>36位：</p>
-        <p>37位：</p>
-        <p>38位：</p>
+        <h2>もしロボットが友達だったら、どんな機能を追加したい？</h2>
+        <p>1位…B.一週間スマホを学校で自由に使えるようにする！…82.4％ 14人</p>
+        <p>2位…C.一週間の好きな日に1日お休みにする！…17.6％ 3人</p>
+        <p>3位…A.一週間給食のデザートを増やす！…0％ 0人</p>
+        <p>グラフ結果！</p>
+        <p>（グラフをタップするとグラフを拡大できます。）</p>
+        <a href="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEW%2B%2BlAhVH6eaSJM7VxoHLpEKoi%2BaqEV1CusybQPno9Rmp7ULzjaloUV5DqwCyysxUjD%2FsQXRDo%2BWMe4%2BLxjEppwgjBa5TZCu%2F5%2B7JLQZixW%2FEhpKlNldwKQ03yuRX%2Fb3bEs3f0A6tgRKtwW8c%2BvwEYwfitloeQy6NSLo6ASTKQxxbNSEH8Ome8pXwWeH9NyqEH1sLhLbbf7%2BNLVAavkdycGk9jpva%2BENmT0l%2FHwNJVqiZ4h6Y5D870XE02VQNeBxaXZrr9tWp464CMkZXMWR27ch39ME6ksgb9oh8chCV5nn4YaIzT12gOLxmV9q9RwDT0xdMemFAoztbAi2WyK3s0hAkySZTJ55q28UQ8x0ZdRKZo14VWNBr6hrmGVeSm1%2B1ouWAILnGE7%2BEcNnmdx%2BfMAPgKWI%2FQMDyY0qoh%2BFSpNWZWEwcgeglPoO3afOgFRAb3AGkmsYer3TZWqXTlbdMmlegcg2NZVJdCHf8nrRB%2BIzojxR9n5AVom5TbR8w9%2B5KgQiC8cMs%2F24EeZNccKovC5Ls1G1Gks1PuZhIFD%2Fu7YHQgBpE5UOS4%2BLi2KmgcFEAnMljaNkW8Mh8%2BaW6W8G1oEjOKg4M8%3D&allow_caching=true&sz=w512">
+          <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEW%2B%2BlAhVH6eaSJM7VxoHLpEKoi%2BaqEV1CusybQPno9Rmp7ULzjaloUV5DqwCyysxUjD%2FsQXRDo%2BWMe4%2BLxjEppwgjBa5TZCu%2F5%2B7JLQZixW%2FEhpKlNldwKQ03yuRX%2Fb3bEs3f0A6tgRKtwW8c%2BvwEYwfitloeQy6NSLo6ASTKQxxbNSEH8Ome8pXwWeH9NyqEH1sLhLbbf7%2BNLVAavkdycGk9jpva%2BENmT0l%2FHwNJVqiZ4h6Y5D870XE02VQNeBxaXZrr9tWp464CMkZXMWR27ch39ME6ksgb9oh8chCV5nn4YaIzT12gOLxmV9q9RwDT0xdMemFAoztbAi2WyK3s0hAkySZTJ55q28UQ8x0ZdRKZo14VWNBr6hrmGVeSm1%2B1ouWAILnGE7%2BEcNnmdx%2BfMAPgKWI%2FQMDyY0qoh%2BFSpNWZWEwcgeglPoO3afOgFRAb3AGkmsYer3TZWqXTlbdMmlegcg2NZVJdCHf8nrRB%2BIzojxR9n5AVom5TbR8w9%2B5KgQiC8cMs%2F24EeZNccKovC5Ls1G1Gks1PuZhIFD%2Fu7YHQgBpE5UOS4%2BLi2KmgcFEAnMljaNkW8Mh8%2BaW6W8G1oEjOKg4M8%3D&allow_caching=true&sz=w512" alt="例の画像1" width="350">
+        </a>
     </section>
 
     <!-- フッター -->
     <footer>
         <p>&copy;作成：一政吏集　プログラム：HTML 　3-2 2024</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !message) {
+                    alert('すべてのフィールドを入力してください。');
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
