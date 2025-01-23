@@ -21,29 +21,48 @@
 
         /* ヘッダーのスタイル */
         header {
-            background-color: #ffcc33; /* ヘッダー背景色を変更 */
-            color: #333; /* 文字色を濃く */
-            padding: 40px 20px;
+            background-image: url('3年2組画像.png'); /* 背景画像をここで指定 */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 135px 0;
             text-align: center;
+            position: relative; /* オーバーレイのため */
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒で文字を引き立てる */
+            z-index: 0;
+        }
+
+        header h1, header h2, header nav ul {
+            position: relative;
+            z-index: 1; /* オーバーレイの上に配置 */
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 4rem; /* タイトルを強調 */
             margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* シャドウで視認性を向上 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* テキストシャドウ */
         }
 
         header h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         header nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         header nav ul li {
@@ -51,14 +70,14 @@
         }
 
         header nav ul li a {
-            color: #333; /* ナビゲーションリンクを調和した色に */
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
 
         header nav ul li a:hover {
-            color: #000; /* ホバー時に濃い色へ */
             text-decoration: underline;
         }
 
@@ -80,6 +99,11 @@
             color: #22a6bb;
         }
 
+        p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
         /* フッターのスタイル */
         footer {
             background-color: #333;
@@ -91,20 +115,20 @@
 
         /* レスポンシブデザイン */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header h2 {
-                font-size: 1.8rem;
-            }
-
             header nav ul {
                 flex-direction: column;
             }
 
             header nav ul li {
                 margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 3rem;
+            }
+
+            header h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -155,7 +179,6 @@
         <p>27位：</p>
         <p>28位：</p>
         <p>29位：</p>
-        <p>30位：</p>
         <p>31位：</p>
         <p>32位：</p>
         <p>33位：</p>
@@ -165,7 +188,6 @@
         <p>37位：</p>
         <p>38位：</p>
     </section>
-    <h2>アコガレ作成3-2：一政吏集</h2>
 
     <!-- フッター -->
     <footer>
