@@ -21,10 +21,20 @@
 
         /* ヘッダーのスタイル */
         header {
-            background-color: #ffff66;
-            color: #fff;
+            background-color: #ffcc00; /* 黄色背景 */
+            color: #333; /* ダークテキスト */
             padding: 20px 0;
             text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
         }
 
         header nav ul {
@@ -39,7 +49,7 @@
         }
 
         header nav ul li a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             font-weight: bold;
         }
@@ -56,22 +66,35 @@
         }
 
         section#home {
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             text-align: center;
         }
 
-        section#contact {
-            background-color: #fff;
-        }
-
-        h2 {
-            text-align: center;
+        section#home h2 {
             margin-bottom: 20px;
             color: #22a6bb;
         }
 
-        .highlight {
-            background-color: yellow;
+        input#search {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        #list p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #list p.highlight {
+            background-color: #ffffcc;
+            font-weight: bold;
         }
 
         /* フッターのスタイル */
@@ -111,8 +134,8 @@
 
     <!-- ホームセクション -->
     <section id="home">
-        <h2>面白い人は？</h2>
-        <input type="text" id="search" placeholder="名前を検索" style="padding: 10px; margin-bottom: 20px;">
+        <h2>クラスメートの中で無人島に連れて行くなら誰？</h2>
+        <input type="text" id="search" placeholder="名前を検索">
         <div id="list">
             <p>1位：山田</p>
             <p>2位：佐藤</p>
@@ -132,25 +155,26 @@
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const searchBox = document.getElementById('search');
-        const list = document.getElementById('list');
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBox = document.getElementById('search');
+            const list = document.getElementById('list');
 
-        searchBox.addEventListener('input', () => {
-            const query = searchBox.value.trim().toLowerCase();
-            const items = list.querySelectorAll('p');
+            searchBox.addEventListener('input', () => {
+                const query = searchBox.value.trim().toLowerCase();
+                const items = list.querySelectorAll('p');
 
-            items.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    item.style.display = ''; // 表示する
-                } else {
-                    item.style.display = 'none'; // 非表示にする
-                }
+                items.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        item.style.display = ''; // 表示する
+                        item.classList.add('highlight'); // ハイライトを追加
+                    } else {
+                        item.style.display = 'none'; // 非表示にする
+                        item.classList.remove('highlight'); // ハイライトを削除
+                    }
+                });
             });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
