@@ -21,17 +21,29 @@
 
         /* ヘッダーのスタイル */
         header {
-            background-color: #ffff66;
-            color: #fff;
-            padding: 20px 0;
+            background-color: #ffcc33; /* ヘッダー背景色を変更 */
+            color: #333; /* 文字色を濃く */
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* シャドウで視認性を向上 */
+        }
+
+        header h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
         }
 
         header nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         header nav ul li {
@@ -39,12 +51,14 @@
         }
 
         header nav ul li a {
-            color: #fff;
+            color: #333; /* ナビゲーションリンクを調和した色に */
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
         header nav ul li a:hover {
+            color: #000; /* ホバー時に濃い色へ */
             text-decoration: underline;
         }
 
@@ -60,47 +74,10 @@
             text-align: center;
         }
 
-        section#contact {
-            background-color: #fff;
-        }
-
         h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #22a6bb;
-        }
-
-        /* フォームのスタイル */
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        form label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        form input, form textarea {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        form button {
-            padding: 10px;
-            background-color: #22a6bb;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: #22f6bb;
         }
 
         /* フッターのスタイル */
@@ -114,6 +91,14 @@
 
         /* レスポンシブデザイン */
         @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header h2 {
+                font-size: 1.8rem;
+            }
+
             header nav ul {
                 flex-direction: column;
             }
@@ -170,6 +155,7 @@
         <p>27位：</p>
         <p>28位：</p>
         <p>29位：</p>
+        <p>30位：</p>
         <p>31位：</p>
         <p>32位：</p>
         <p>33位：</p>
@@ -185,21 +171,5 @@
     <footer>
         <p>&copy;作成：一政吏集　プログラム：HTML 　3-2 2024</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.querySelector('form');
-            form.addEventListener('submit', (e) => {
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
-
-                if (!name || !email || !message) {
-                    alert('すべてのフィールドを入力してください。');
-                    e.preventDefault();
-                }
-            });
-        });
-    </script>
 </body>
 </html>
