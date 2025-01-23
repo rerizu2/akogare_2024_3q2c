@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2024　3-2　ページ</title>
+    <title>2024 3-2 ページ</title>
     <style>
         /* リセットCSS */
         * {
@@ -12,14 +12,13 @@
             box-sizing: border-box;
         }
 
-        /* ボディのスタイル */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            text-align: center;
         }
 
-        /* ヘッダーのスタイル */
         header {
             background-image: url('3年2組画像.png'); /* 背景画像のパスを指定 */
             background-size: cover;
@@ -41,269 +40,70 @@
             z-index: 0;
         }
 
-        header h1, header h2, header nav ul {
+        header h1, header h2 {
             position: relative;
             z-index: 1;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
-        header h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        header nav ul li {
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
+        .clickable-text {
+            color: #22a6bb;
+            font-size: 18px;
             font-weight: bold;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-
-        header nav ul li a:hover {
+            cursor: pointer;
             text-decoration: underline;
-        }
-
-        /* セクションのスタイル */
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        section#home {
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-
-        section#home input {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            width: 90%;
-            max-width: 400px;
-        }
-
-        section#home p {
-            font-size: 1.2rem;
             margin: 10px 0;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #22a6bb;
+        .clickable-text:hover {
+            color: #1e90ff;
         }
 
-        /* フッターのスタイル */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        /* レスポンシブデザイン */
-        @media (max-width: 768px) {
-            header nav ul {
-                flex-direction: column;
-            }
-
-            header nav ul li {
-                margin: 10px 0;
-            }
-
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header h2 {
-                font-size: 1.5rem;
-            }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <!-- ヘッダー -->
     <header>
-        <h1>アコガレ　2024 3-2</h1>
-        <h2>〜　団結　〜</h2>
-        <nav>
-            <ul>
-                <li><a href="アコガレ　2024 3-2.html">3-2紹介</a></li>
-                <li><a href="2024　3-2　担任紹介.html">担任紹介</a></li>
-                <li><a href="2024 3-2　順位.html">3-2順位</a></li>
-            </ul>
-        </nav>
+        <h1>2024 3-2 ページ</h1>
+        <h2>アコガレ作成3-2：一政吏集</h2>
     </header>
 
-    <!-- ホームセクション -->
-    <section id="home">
-        <h2>クラスメートの中で無人島に連れていくなら誰？</h2>
-        <input type="text" id="search" placeholder="名前を検索">
-        <div id="list">
-            <p class="clickable-text" id="clickableText">1位：上手　11.8% 2人</p>
-            <div id="output"></div>
+    <section>
+        <h2>クリックして結果を表示</h2>
+        <p class="clickable-text" data-output="一緒に手伝ってくれるから。パワーがすごいから。">1位：川邊徠斗 11.8% (2人)</p>
+        <p class="clickable-text" data-output="彼の笑顔が素敵だから！">2位：藤本彰真 5.9% (1人)</p>
+        <p class="clickable-text" data-output="彼女の優しさに感動したから！">2位：上田望未 5.9% (1人)</p>
+        <p class="clickable-text" data-output="クラスでの信頼が厚いから！">2位：福本優愛 5.9% (1人)</p>
+        <p class="clickable-text" data-output="一緒にいると楽しいから！">2位：有馬 5.9% (1人)</p>
+        <p class="clickable-text" data-output="スポーツが得意だから！">2位：中尾 5.9% (1人)</p>
+        <p class="clickable-text" data-output="彼の元気さが大好きだから！">2位：西村 5.9% (1人)</p>
+        <p class="clickable-text" data-output="リーダーシップが素晴らしいから！">2位：浅田玲鳳 5.9% (1人)</p>
+        <p class="clickable-text" data-output="ユーモアがあるから！">2位：箱家誠人 5.9% (1人)</p>
+        <p class="clickable-text" data-output="彼の冷静さに憧れるから！">2位：福井力 5.9% (1人)</p>
+        <p class="clickable-text" data-output="一緒に挑戦するのが楽しいから！">2位：藤川拓己 5.9% (1人)</p>
 
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">1位：中瀬こはる　11.8% 2人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">1位：川邊徠斗　11.8% 2人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = '一緒に手伝ってくれるから
-                                     パワーがすごいから';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：藤本彰真　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：上田望未　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：福本優愛　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：有馬　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：中尾　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：西村　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：浅田玲鳳　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：箱家誠人　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：福井力　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-            <p class="clickable-text" id="clickableText">2位：藤川拓己　5.9% 1人</p>
-            <div id="output"></div>
-
-    <script>
-        document.getElementById('clickableText').addEventListener('click', () => {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent = 'こんにちは！これが表示される文字です。';
-        });
-    </script>
-        </div>
+        <div id="output"></div>
     </section>
 
-    <h2>アコガレ作成3-2：一政吏集</h2>
-
-    <!-- フッター -->
     <footer>
-        <p>&copy;作成：一政吏集　プログラム：HTML 　3-2 2024</p>
+        <p>&copy; 作成：一政吏集 プログラム：HTML 3-2 2024</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const searchBox = document.getElementById('search');
-            const list = document.getElementById('list');
+            // すべてのクリック可能なテキストを取得
+            const clickableTexts = document.querySelectorAll('.clickable-text');
+            const outputDiv = document.getElementById('output');
 
-            searchBox.addEventListener('input', () => {
-                const query = searchBox.value.trim().toLowerCase();
-                const items = list.querySelectorAll('p');
-
-                items.forEach(item => {
-                    const text = item.textContent.toLowerCase();
-                    if (text.includes(query)) {
-                        item.style.display = ''; // 表示
-                    } else {
-                        item.style.display = 'none'; // 非表示
-                    }
+            // 各クリック可能テキストにクリックイベントを追加
+            clickableTexts.forEach(item => {
+                item.addEventListener('click', () => {
+                    const outputText = item.getAttribute('data-output');
+                    outputDiv.textContent = outputText;
                 });
             });
         });
