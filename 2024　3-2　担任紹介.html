@@ -21,10 +21,40 @@
 
         /* ヘッダーのスタイル */
         header {
-            background-color: #ffff66;
+            background-image: url('3年2組画像.png'); /* 画像のパスを指定 */
+            background-size: cover;
+            background-position: center;
             color: #fff;
-            padding: 20px 0;
+            padding: 135px 0;
             text-align: center;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
+            z-index: 0;
+        }
+
+        header h1, header h2, header nav ul {
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* テキストシャドウ */
+        }
+
+        header h1 {
+            font-size: 4rem; /* 文字サイズを調整 */
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 2.5rem; /* サブタイトルのサイズ調整 */
+            margin-bottom: 20px;
         }
 
         header nav ul {
@@ -42,6 +72,7 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2rem; /* ナビゲーションリンクのサイズ調整 */
         }
 
         header nav ul li a:hover {
@@ -92,7 +123,7 @@
 
         form button {
             padding: 10px;
-            background-color: #22c6bb;
+            background-color: #22a6bb;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -100,7 +131,7 @@
         }
 
         form button:hover {
-            background-color: #22a6bb;
+            background-color: #22f6bb;
         }
 
         /* フッターのスタイル */
@@ -120,6 +151,14 @@
 
             header nav ul li {
                 margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 3rem; /* スマホ用サイズ */
+            }
+
+            header h2 {
+                font-size: 2rem;
             }
         }
     </style>
